@@ -74,13 +74,20 @@ npm install
 
 # creo migration
 php artisan make:migration create_nome_tabella_table
+
+#creo migration per modifiche ai campi esistenti
 php artisan make:migration update_users_table --table=users
+
+#creo migration per aggiungere un campo ad una tabella
 php artisan make:migration add_phone_number_to_users_table
+
+#lancio migration
+php artisan migrate
 
 #revert migration
 php artisan migrate:rollback
 
-#popolare il db
+#popolare il db (creo seeder)
 php artisan make:seeder UsersTableSeeder
 
 #invio dati al db
